@@ -33,13 +33,9 @@ StockPilot is a full-stack inventory and order management system built for a Sof
 
 ![Orders](https://raw.githubusercontent.com/avi4748sinha/StockPilot/main/frontend/public/screenshorts/04.png)
 
-### Docker Setup
+(https://raw.githubusercontent.com/avi4748sinha/StockPilot/main/frontend/public/screenshorts/05.png)
 
-![Docker Setup](https://raw.githubusercontent.com/avi4748sinha/StockPilot/main/frontend/public/screenshorts/05.png)
-
-### Docker Setup
-
-![Docker Setup](https://raw.githubusercontent.com/avi4748sinha/StockPilot/main/frontend/public/screenshots/05.png)
+(https://raw.githubusercontent.com/avi4748sinha/StockPilot/main/frontend/public/screenshots/05.png)
 
 ---
 
