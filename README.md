@@ -25,23 +25,11 @@ StockPilot is a full-stack inventory and order management system built for a Sof
 
 ## Screenshots
 
-## Screenshots
-
-## Screenshots
-
-### Dashboard
-
 ![Dashboard](https://raw.githubusercontent.com/avi4748sinha/StockPilot/main/frontend/public/screenshorts/01.png)
-
-### Products
 
 ![Products](https://raw.githubusercontent.com/avi4748sinha/StockPilot/main/frontend/public/screenshorts/02.png)
 
-### Customers
-
 ![Customers](https://raw.githubusercontent.com/avi4748sinha/StockPilot/main/frontend/public/screenshorts/03.png)
-
-### Orders
 
 ![Orders](https://raw.githubusercontent.com/avi4748sinha/StockPilot/main/frontend/public/screenshorts/04.png)
 
