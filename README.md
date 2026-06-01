@@ -219,7 +219,7 @@ npm run dev
 ## 🌐 Live URLs
 
 Frontend:
-https://sync-pay-sandy.vercel.app
+stock-pilot-flax.vercel.app
 
 Backend API:
 https://stockpilot-backend-yp7d.onrender.com
