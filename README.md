@@ -25,25 +25,27 @@ StockPilot is a full-stack inventory and order management system built for a Sof
 
 ## Screenshots
 
+## Screenshots
+
 ### Dashboard
 
-![Dashboard](https://raw.githubusercontent.com/your-github-username/StockPilot/main/frontend/public/screenshots/01.png)
+![Dashboard](https://raw.githubusercontent.com/avi4748sinha/StockPilot/main/frontend/public/screenshots/01.png)
 
 ### Products
 
-![Products](https://raw.githubusercontent.com/your-github-username/StockPilot/main/frontend/public/screenshots/02.png)
+![Products](https://raw.githubusercontent.com/avi4748sinha/StockPilot/main/frontend/public/screenshots/02.png)
 
 ### Customers
 
-![Customers](https://raw.githubusercontent.com/your-github-username/StockPilot/main/frontend/public/screenshots/03.png)
+![Customers](https://raw.githubusercontent.com/avi4748sinha/StockPilot/main/frontend/public/screenshots/03.png)
 
 ### Orders
 
-![Orders](https://raw.githubusercontent.com/your-github-username/StockPilot/main/frontend/public/screenshots/04.png)
+![Orders](https://raw.githubusercontent.com/avi4748sinha/StockPilot/main/frontend/public/screenshots/04.png)
 
 ### Docker Setup
 
-![Docker Setup](https://raw.githubusercontent.com/your-github-username/StockPilot/main/frontend/public/screenshots/05.png)
+![Docker Setup](https://raw.githubusercontent.com/avi4748sinha/StockPilot/main/frontend/public/screenshots/05.png)
 
 ---
 
