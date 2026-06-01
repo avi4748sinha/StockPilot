@@ -124,3 +124,9 @@ def latest_activity(_: dict = Depends(require_auth), db: Session = Depends(get_d
         for product in recent_products
     )
     return sorted(activity, key=lambda item: item.created_at, reverse=True)[:8]
+    @app.get("/")
+def root():
+    return {
+        "message": "StockPilot API is running",
+        "docs": "/docs"
+    }
