@@ -33,6 +33,10 @@ StockPilot is a full-stack inventory and order management system built for a Sof
 
 ![Orders](https://raw.githubusercontent.com/avi4748sinha/StockPilot/main/frontend/public/screenshorts/04.png)
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5757f7ad04a7196179f2cebafc0856287e43d878
 ---
 
 ## Tech Stack
@@ -61,7 +65,11 @@ StockPilot is a full-stack inventory and order management system built for a Sof
 ### Deployment
 
 * Vercel
+<<<<<<< HEAD
 * Render
+=======
+* Railway
+>>>>>>> 5757f7ad04a7196179f2cebafc0856287e43d878
 
 ---
 
@@ -190,12 +198,20 @@ npm run dev
 
 ## 🌐 Deployment
 
+<<<<<<< HEAD
 ### Backend Deployment (Render)
 
 * Push the project to GitHub
 * Create a PostgreSQL database on Render
 * Create a new Web Service on Render
 * Set root directory to `backend`
+=======
+### Backend Deployment (Railway)
+
+* Push the project to GitHub
+* Go to Railway → New Project → Deploy from GitHub
+* Select the `StockPilot` repository
+>>>>>>> 5757f7ad04a7196179f2cebafc0856287e43d878
 * Add required environment variables:
 
   * `DATABASE_URL`
@@ -203,7 +219,12 @@ npm run dev
   * `ADMIN_EMAIL`
   * `ADMIN_PASSWORD`
   * `AUTH_SECRET`
+<<<<<<< HEAD
 * Deploy the backend service
+=======
+* Set root directory to `backend`
+* Generate a public domain from Railway Networking settings
+>>>>>>> 5757f7ad04a7196179f2cebafc0856287e43d878
 
 ### Frontend Deployment (Vercel)
 
@@ -219,6 +240,7 @@ npm run dev
 ## 🌐 Live URLs
 
 Frontend:
+<<<<<<< HEAD
 https://sync-pay-sandy.vercel.app
 
 Backend API:
@@ -229,6 +251,18 @@ https://stockpilot-backend-yp7d.onrender.com/docs
 
 Docker Hub:
 https://hub.docker.com/r/avi4748sinha/stockpilot-backend
+=======
+https://your-frontend.vercel.app
+
+Backend API:
+https://your-backend.up.railway.app
+
+API Documentation:
+https://your-backend.up.railway.app/docs
+
+Docker Hub:
+https://hub.docker.com/r/your-dockerhub-username/stockpilot-backend
+>>>>>>> 5757f7ad04a7196179f2cebafc0856287e43d878
 
 ---
 
