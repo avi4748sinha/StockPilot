@@ -219,7 +219,7 @@ npm run dev
 ## 🌐 Live URLs
 
 Frontend:
-stock-pilot-flax.vercel.app
+https://stock-pilot-flax.vercel.app
 
 Backend API:
 https://stockpilot-backend-yp7d.onrender.com
