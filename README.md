@@ -227,7 +227,7 @@ https://stockpilot-backend-yp7d.onrender.com
 API Documentation:
 https://stockpilot-backend-yp7d.onrender.com/docs
 
-Docker Hub:
+Backend Docker Hub Image:
 https://hub.docker.com/r/avi4748sinha/stockpilot-backend
 
 ---
