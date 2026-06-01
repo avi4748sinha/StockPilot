@@ -65,7 +65,9 @@ def on_startup() -> None:
 @app.get("/health")
 def health_check() -> dict[str, str]:
     return {"status": "ok"}
-
+@app.get("/")
+def root():
+    return {"message": "StockPilot API is running🚀", "docs": "/docs"}
 
 @app.post("/auth/login", response_model=LoginResponse)
 def login(payload: LoginRequest) -> LoginResponse:
