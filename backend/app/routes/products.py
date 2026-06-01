@@ -1,0 +1,75 @@
+from fastapi import APIRouter, Depends, HTTPException, status
+from sqlalchemy import func, select
+from sqlalchemy.exc import IntegrityError
+from sqlalchemy.orm import Session
+
+from app.auth import require_auth
+from app.db import get_db
+from app.models import OrderItem, Product
+from app.schemas import ProductCreate, ProductRead, ProductUpdate
+
+
+router = APIRouter(prefix="/products", tags=["Products"])
+
+
+@router.post("", response_model=ProductRead, status_code=status.HTTP_201_CREATED)
+def create_product(payload: ProductCreate, _: dict = Depends(require_auth), db: Session = Depends(get_db)) -> Product:
+    product = Product(**payload.model_dump())
+    db.add(product)
+    try:
+        db.commit()
+    except IntegrityError as exc:
+        db.rollback()
+        raise HTTPException(status_code=409, detail="Product SKU already exists") from exc
+    db.refresh(product)
+    return product
+
+
+@router.get("", response_model=list[ProductRead])
+def list_products(_: dict = Depends(require_auth), db: Session = Depends(get_db)) -> list[Product]:
+    return list(db.scalars(select(Product).order_by(Product.name)))
+
+
+@router.get("/{product_id}", response_model=ProductRead)
+def get_product(product_id: int, _: dict = Depends(require_auth), db: Session = Depends(get_db)) -> Product:
+    product = db.get(Product, product_id)
+    if not product:
+        raise HTTPException(status_code=404, detail="Product not found")
+    return product
+
+
+@router.put("/{product_id}", response_model=ProductRead)
+def update_product(
+    product_id: int,
+    payload: ProductUpdate,
+    _: dict = Depends(require_auth),
+    db: Session = Depends(get_db),
+) -> Product:
+    product = db.get(Product, product_id)
+    if not product:
+        raise HTTPException(status_code=404, detail="Product not found")
+
+    for field, value in payload.model_dump(exclude_unset=True).items():
+        setattr(product, field, value)
+
+    try:
+        db.commit()
+    except IntegrityError as exc:
+        db.rollback()
+        raise HTTPException(status_code=409, detail="Product SKU already exists") from exc
+    db.refresh(product)
+    return product
+
+
+@router.delete("/{product_id}", status_code=status.HTTP_204_NO_CONTENT)
+def delete_product(product_id: int, _: dict = Depends(require_auth), db: Session = Depends(get_db)) -> None:
+    product = db.get(Product, product_id)
+    if not product:
+        raise HTTPException(status_code=404, detail="Product not found")
+
+    has_orders = db.scalar(select(func.count(OrderItem.id)).where(OrderItem.product_id == product_id))
+    if has_orders:
+        raise HTTPException(status_code=409, detail="Products used in orders cannot be deleted")
+
+    db.delete(product)
+    db.commit()
